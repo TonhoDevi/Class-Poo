@@ -1,10 +1,21 @@
 package models;
 
 public class Produto {
+
+	private int ID;
 	private String nome;
 	private double valor;
 	private int unidades;
 	private String descricao;
+	
+	
+	private static int contador =0;
+	
+	public Produto() {
+		this.ID = ++contador;
+	}
+	
+	
 	
 	public String getNome() {
 		return nome;
@@ -30,7 +41,9 @@ public class Produto {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
+	public int getID() {
+		return ID;
+	}
 	
 	
 	
